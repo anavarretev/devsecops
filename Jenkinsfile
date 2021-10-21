@@ -19,5 +19,11 @@ pipeline {
                  sh 'mvn clean compile -e'
             }
         }
+      stage('Test'){
+            steps{
+                figlet 'Test'
+                sh 'mvn clean test -e'
+            }
+        }
     }
 }
